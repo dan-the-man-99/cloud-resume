@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Website Diagram</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 50%;
+            height: auto;
+            border: 1px solid #333;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) { 
+            img {
+                max-width: 80%;
+            }
+        }
+
+
+        p {
+            text-align: center;
+            margin-top: 30px; 
+            margin-bottom: 20px; 
+            font-size: 20px; 
+            line-height: 1.6;
+        }
+
+        .explanation {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        ul {
+            text-align: left;
+            margin-top: 20px; 
+            margin-bottom: 20px; 
+            padding-left: 20px;
+            font-size: 18px;
+            line-height: 1.6;
+
+        }
+
+        .return-button {
+            position: fixed;
+            top: 20px;
+            left: 20px; /* Changed from 'right' to 'left' */
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .return-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="return-button">Return</a>
+    <h1>How this AWS Website Works:</h1>
+    <img src="diagram.jpg" alt="AWS Website Diagram">
+    <div class="explanation">
+        <p>This website works by using AWS services. It utilizes HTML, CSS, and JavaScript for the frontend. The backend infrastructure is powered by a combination of AWS services:</p>
+        <ul>
+            <li><strong>Route 53:</strong> Provides domain registration and DNS routing.</li>
+            <li><strong>ACM (AWS Certificate Manager):</strong> Manages SSL/TLS certificates for secure communication.</li>
+            <li><strong>CloudFront:</strong> Acts as a content delivery network (CDN) to accelerate content delivery globally.</li>
+            <li><strong>S3 (Simple Storage Service):</strong> Stores static assets such as HTML files, JavaScript files, CSS stylesheets, and images. </li>
+            <li><strong>Lambda:</strong> Executes serverless functions in this case for retrieves the value from the dynamoDB increment it by 1 prints the new value then update the dynamoDB  count</li>
+            <li><strong>DynamoDB:</strong> Provides a NoSQL database for storing and retrieving dynamic data.</li>
+        </ul>
+        <p>I have also created a GitHub repository for this project. However, CI/CD (Continuous Integration/Continuous Deployment) has not been implemented yet. I plan to use Terraform for automating the deployment process, so stay tuned for updates!</p>
+    </div>
+</body>
+</html>
