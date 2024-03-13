@@ -33,30 +33,6 @@
             }
         }
 
-
-        p {
-            text-align: center;
-            margin-top: 30px; 
-            margin-bottom: 20px; 
-            font-size: 20px; 
-            line-height: 1.6;
-        }
-
-        .explanation {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        ul {
-            text-align: left;
-            margin-top: 20px; 
-            margin-bottom: 20px; 
-            padding-left: 20px;
-            font-size: 18px;
-            line-height: 1.6;
-
-        }
-
         .return-button {
             position: fixed;
             top: 20px;
@@ -74,23 +50,45 @@
         .return-button:hover {
             background-color: #0056b3;
         }
+
+        .explanation {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            padding-bottom: 20px; /* Added padding-bottom */
+        }
+
+        p {
+            margin-top: 30px; 
+            margin-bottom: 20px; 
+            font-size: 20px; 
+            line-height: 1.6;
+        }
+
+        ul {
+            text-align: left;
+            margin-top: 20px; 
+            margin-bottom: 20px; 
+            padding-left: 20px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
     </style>
 </head>
 <body>
     <a href="index.html" class="return-button">Return</a>
     <h1>How this AWS Website Works:</h1>
-    <img src="diagram.jpg" alt="AWS Website Diagram">
+    <img src="aws.jpg" alt="AWS Website Diagram">
     <div class="explanation">
-        <p>This website works by using AWS services. It utilizes HTML, CSS, and JavaScript for the frontend. The backend infrastructure is powered by a combination of AWS services:</p>
+        <p>This website operates with AWS services, utilizing HTML, CSS, and JavaScript for the frontend. The backend infrastructure is powered by various AWS services:</p>
         <ul>
             <li><strong>Route 53:</strong> Provides domain registration and DNS routing.</li>
             <li><strong>ACM (AWS Certificate Manager):</strong> Manages SSL/TLS certificates for secure communication.</li>
             <li><strong>CloudFront:</strong> Acts as a content delivery network (CDN) to accelerate content delivery globally.</li>
             <li><strong>S3 (Simple Storage Service):</strong> Stores static assets such as HTML files, JavaScript files, CSS stylesheets, and images. </li>
-            <li><strong>Lambda:</strong> Executes serverless functions in this case for retrieves the value from the dynamoDB increment it by 1 prints the new value then update the dynamoDB  count</li>
+            <li><strong>Lambda:</strong> Executes serverless functions in this case for retrieving and updating the value in DynamoDB.</li>
             <li><strong>DynamoDB:</strong> Provides a NoSQL database for storing and retrieving dynamic data.</li>
         </ul>
-        <p>I have also created a GitHub repository for this project. However, CI/CD (Continuous Integration/Continuous Deployment) has not been implemented yet. I plan to use Terraform for automating the deployment process, so stay tuned for updates!</p>
-    </div>
+        <p>I've established a public GitHub repository for this project: <a href="https://github.com/dan-the-man-99/cloud-resume" target="_blank">dan-the-man-99/cloud-resume</a> and successfully implemented CI/CD using the <code>jakejarvis/s3-sync-action</code>, automating the synchronization of changes from my local machine to GitHub and then to my S3 bucket. Stay tuned for future updates, as I plan to further streamline the deployment process using Terraform!</p>    </div>
 </body>
 </html>
