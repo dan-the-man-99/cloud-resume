@@ -17,14 +17,15 @@
         <div class="content-explanation">
         <p>This website operates with AWS services, utilizing HTML, CSS, and JavaScript for the frontend. The backend infrastructure is powered by various AWS services:</p>
         <ul>
-            <li><strong>Route 53:</strong> Provides domain registration and DNS routing.</li>
-            <li><strong>ACM (AWS Certificate Manager):</strong> Manages SSL/TLS certificates for secure communication.</li>
-            <li><strong>CloudFront:</strong> Acts as a content delivery network (CDN) to accelerate content delivery globally.</li>
-            <li><strong>S3 (Simple Storage Service):</strong> Stores static assets such as HTML files, JavaScript files, CSS stylesheets, and images. </li>
-            <li><strong>Lambda for Counting Views:</strong> Executes serverless functions in this case for retrieving and updating the count value from DynamoDB.</li>
-            <li><strong>Lambda for Email Notification:</strong> Get data from dynamodb trigger lambda function to send message via email using SNS</li>
-            <li><strong>DynamoDB:</strong> Provides a NoSQL database for storing and retrieving dynamic data.</li>
-            <li><strong>AWS API Gateway:</strong>reciever of of data from website and forwarding it to lambda</li>
+            <li><strong>Route 53:</strong> Manages domain registration and DNS routing to ensure reliable access to your resources.</li>
+            <li><strong>ACM (AWS Certificate Manager):</strong> Streamlines the management of SSL/TLS certificates for secure communications.</li>
+            <li><strong>CloudFront:</strong> Functions as a content delivery network (CDN), optimizing global content delivery speeds.</li>
+            <li><strong>S3 (Simple Storage Service):</strong> Safely stores static assets, including HTML files, JavaScript, CSS stylesheets, and images.</li>
+            <li><strong>Lambda for Counting Views:</strong> Executes serverless functions to retrieve and update view counts stored in DynamoDB.</li>
+            <li><strong>Lambda for Form Data Storage:</strong> Configured as a trigger to save incoming form data to DynamoDB.</li>
+            <li><strong>Lambda for Email Notifications:</strong> Sends email alerts via SNS using data triggered from DynamoDB.</li>
+            <li><strong>DynamoDB:</strong> Offers a scalable NoSQL database for efficient storage and retrieval of dynamic data.</li>
+            <li><strong>AWS API Gateway:</strong> Receives data from the website and forwards it to Lambda, with CORS configured for secure cross-origin requests.</li>
         </ul>
         <p>Stay tuned for future updates, as I plan to further streamline the deployment process using Terraform!</p>    </div>
     </div>
