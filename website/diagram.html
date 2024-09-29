@@ -2,93 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explained!</title>
+    <link rel="icon" href="1.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
     <title>AWS Website Diagram</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-        }
-
-        h1 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        img {
-            display: block;
-            margin: 0 auto;
-            max-width: 50%;
-            height: auto;
-            border: 1px solid #333;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
-
-        @media (max-width: 768px) { 
-            img {
-                max-width: 80%;
-            }
-        }
-
-        .return-button {
-            position: fixed;
-            top: 20px;
-            left: 20px; /* Changed from 'right' to 'left' */
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .return-button:hover {
-            background-color: #0056b3;
-        }
-
-        .explanation {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-            padding-bottom: 20px; /* Added padding-bottom */
-        }
-
-        p {
-            margin-top: 30px; 
-            margin-bottom: 20px; 
-            font-size: 20px; 
-            line-height: 1.6;
-        }
-
-        ul {
-            text-align: left;
-            margin-top: 20px; 
-            margin-bottom: 20px; 
-            padding-left: 20px;
-            font-size: 18px;
-            line-height: 1.6;
-        }
-    </style>
 </head>
 <body>
     <a href="index.html" class="return-button">Return</a>
-    <h1>How this AWS Website Works:</h1>
-    <img src="aws.jpg" alt="AWS Website Diagram">
-    <div class="explanation">
+    <div class="content-wrapper">
+        <h1 class="content-title">How this AWS Website Works:</h1>
+        <img src="Diagram.png" alt="AWS Website Diagram" class="content-image">
+        <div class="content-explanation">
         <p>This website operates with AWS services, utilizing HTML, CSS, and JavaScript for the frontend. The backend infrastructure is powered by various AWS services:</p>
         <ul>
             <li><strong>Route 53:</strong> Provides domain registration and DNS routing.</li>
             <li><strong>ACM (AWS Certificate Manager):</strong> Manages SSL/TLS certificates for secure communication.</li>
             <li><strong>CloudFront:</strong> Acts as a content delivery network (CDN) to accelerate content delivery globally.</li>
             <li><strong>S3 (Simple Storage Service):</strong> Stores static assets such as HTML files, JavaScript files, CSS stylesheets, and images. </li>
-            <li><strong>Lambda:</strong> Executes serverless functions in this case for retrieving and updating the value in DynamoDB.</li>
+            <li><strong>Lambda for Counting Views:</strong> Executes serverless functions in this case for retrieving and updating the count value from DynamoDB.</li>
+            <li><strong>Lambda for Email Notification:</strong> Get data from dynamodb trigger lambda function to send message via email using SNS</li>
             <li><strong>DynamoDB:</strong> Provides a NoSQL database for storing and retrieving dynamic data.</li>
+            <li><strong>AWS API Gateway:</strong>reciever of of data from website and forwarding it to lambda</li>
         </ul>
-        <p>I've established a public GitHub repository for this project: <a href="https://github.com/dan-the-man-99/cloud-resume" target="_blank">dan-the-man-99/cloud-resume</a> and successfully implemented CI/CD using the <code>jakejarvis/s3-sync-action</code>, automating the synchronization of changes from my local machine to GitHub and then to my S3 bucket. Stay tuned for future updates, as I plan to further streamline the deployment process using Terraform!</p>    </div>
+        <p>Stay tuned for future updates, as I plan to further streamline the deployment process using Terraform!</p>    </div>
+    </div>
+</div>
 </body>
 </html>

@@ -1,186 +1,476 @@
-/* Light mode styles */
-body {
-    background-color: #ffffff;
-    color: #000000;
-    font-family: Arial, sans-serif;
-}
-
-/* Dark mode styles */
-body.dark-mode {
-    background-color: #000000;
-    color: #ffffff;
-}
-
-/* Toggle switch styles */
-.switch {
-    position: relative;
-    display: flex; /* Use flexbox */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    width: 63px;
-    height: 37px;
-}
-
-.switch input {
-    display: none;
-}
-
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: .4s;
-    border-radius: 34px;
-}
-
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    transition: .4s;
-    border-radius: 50%;
-}
-
-input:checked + .slider {
-    background-color: #2196F3;
-}
-
-input:checked + .slider:before {
-    transform: translateX(26px);
-}
-
-/* Additional styles for switch */
-.slider {
-    border: 2px solid #000; /* Border color */
-}
-
-.slider:before {
-    background-color: #000; /* Slider color */
-}
-
-
-
-/* style for the views counter */
-
-.counter-number {
-    font-size: 18px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-
-
-
-.certifications a {
-    color: rgb(5, 99, 193); /* Change link color to black */
-    text-decoration: none; /* Remove underline */
-}
-
-.certifications a:hover {
-    text-decoration: underline; /* Add underline on hover */
-}
-
-
-
-
-
-
-/* Container styles */
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    box-sizing: border-box; /* Ensure padding is included in max-width */
-}
-
-/* Header styles */
-header h1 {
-    margin-bottom: 20px;
-}
-
-/* Contact info styles */
-.contact-info p {
-    margin: 10px 0;
-}
-
-.contact-info a {
-    text-decoration: none;
-    color: #007bff;
-}
-
-.contact-info a:hover {
-    text-decoration: underline;
-}
-
-/* Section styles */
-section {
-    margin-bottom: 30px;
-}
-
-section h2 {
-    margin-bottom: 15px;
-}
-
-/* List styles */
-ul {
-    list-style-type: none;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* List item styles */
-li {
-    margin-bottom: 5px;
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #1f242d;
+    overflow-x: hidden;
+    padding: 20px; /* Added padding for spacing */
 }
 
-/* List item bullet styles */
-li::before {
-    content: "\2022";
-    color: #007bff;
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
+h1 {
+    font-size: 70px; /* Adjusted font size */
+    color: #fff;
+    text-align: center; /* Centered text */
+    animation: fadeInUp 0.6s ease forwards; /* Animation for the title */
 }
 
-/* Media query for smaller screen sizes */
-@media screen and (max-width: 600px) {
-    .container {
-        padding: 10px;
+p {
+    font-size: 24px; /* Adjusted font size */
+    color: #0ef;
+    font-weight: 600;
+    text-align: center; /* Centered text */
+    margin: 5px 0; /* Spacing between paragraphs */
+    animation: fadeInUp 0.6s ease forwards; /* Animation for paragraphs */
+}
+
+.animate {
+    opacity: 0;
+    transform: translateY(20px); /* Start slightly below */
+    transition: opacity 0.6s ease, transform 0.6s ease; /* Smooth transition */
+}
+
+.show-animate .animate {
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Reset position */
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Start slightly below */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Reset position */
+    }
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 50px; /* Smaller font size on mobile */
+    }
+    p {
+        font-size: 18px; /* Smaller font size for paragraphs */
+    }
+}
+
+
+
+.sec-2 {
+    padding: 20px; /* Added padding for spacing */
+    text-align: center; /* Centered text for better presentation */
+}
+
+.sec-2 .animate {
+    opacity: 0; /* Initial opacity for animation */
+    transform: translateX(100%); /* Initial position for animation */
+    transition: transform 0.5s, opacity 0.5s; /* Smooth transition */
+}
+
+.sec-2.show-animate .animate {
+    opacity: 1; /* Fade in */
+    transform: translateX(0); /* Reset position */
+}
+
+.sec-2 p {
+    color: #0ef; /* Text color */
+    font-size: 20px; /* Adjusted font size */
+    max-width: 800px; /* Max width for readability */
+    margin: 10px auto; /* Centered margin */
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+    .sec-2 p {
+        font-size: 16px; /* Smaller font size on mobile */
+    }
+    .sec-2 h1 {
+        font-size: 50px; /* Smaller font size for paragraphs on mobile */
+    }
+}
+
+
+.sec-3 {
+    padding: 20px; /* Added padding for spacing */
+    text-align: center; /* Centered text for headings */
+}
+
+.sec-3 .animate {
+    opacity: 0; /* Initial opacity for animation */
+    transform: scale(0.9); /* Slightly smaller for animation */
+    transition: 0.5s; /* Smooth transition for appearance */
+}
+
+.sec-3.show-animate .animate {
+    opacity: 1; /* Fade in */
+    transform: scale(1); /* Reset to normal size */
+}
+
+.sec-3 h1 {
+    font-size: 60px; /* Adjusted font size for the heading */
+    color: #fff; /* Color for the heading */
+    margin-bottom: 20px; /* Spacing below the heading */
+}
+
+.sec-3 p {
+    color: #e0f; /* Color for paragraph text */
+    font-size: 20px; /* Font size for paragraphs */
+    max-width: 800px; /* Max width for readability */
+    margin: 10px auto; /* Centered with margin */
+}
+
+.sec-3 ul {
+    list-style-type: none; /* Removed bullet points */
+    padding: 0; /* Removed default padding */
+    margin: 20px 0; /* Spacing for the list */
+}
+
+.sec-3 li {
+    font-size: 18px; /* Font size for list items */
+    color: #0ef; /* Consistent color with text */
+    margin: 10px 0; /* Spacing between list items */
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+    .sec-3 h1 {
+        font-size: 40px; /* Smaller font size on mobile */
     }
 
-    header h1 {
-        font-size: 24px;
+    .sec-3 p {
+        font-size: 16px; /* Smaller font size for paragraphs on mobile */
     }
 
-    section h2 {
-        font-size: 20px;
+    .sec-3 li {
+        font-size: 16px; /* Smaller font size for list items on mobile */
     }
 }
 
+
+.sec-5 {
+    padding: 20px; /* Added padding for better spacing */
+    text-align: center; /* Centered title */
+}
+
+.sec-5 h1 {
+    font-size: 60px; /* Adjusted font size for the heading */
+    color: #fff; /* Color for the heading */
+    margin-bottom: 20px; /* Spacing below the heading */
+}
+
+.sec-5 .animate {
+    opacity: 0; /* Initial opacity for animation */
+    transform: scale(0.9); /* Slightly smaller for animation */
+    transition: 0.5s; /* Smooth transition for appearance */
+}
+
+.sec-5.show-animate .animate {
+    opacity: 1; /* Fade in */
+    transform: scale(1); /* Reset to normal size */
+}
+
+.sec-5 .job-title {
+    color: #e0f; /* Color for job titles */
+    font-size: 20px; /* Adjusted font size for job titles */
+    margin: 5px 0; /* Margin for spacing */
+}
+
+.sec-5 .job-location {
+    color: #0ef; /* Color for job locations */
+    font-size: 16px; /* Smaller font size for locations */
+    margin: 5px 0; /* Margin for spacing */
+}
+
+.sec-5 ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 10px 0; /* Margin for spacing */
+    text-align: left; /* Align text to the left */
+}
+
+.sec-5 li {
+    font-size: 18px; /* Adjusted font size for list items */
+    max-width: 800px; /* Max width for readability */
+    color: #0ef; /* Consistent color */
+    margin: 5px 0; /* Margin for spacing between items */
+    padding-left: 20px; /* Indent for better layout */
+}
+
+/* Optional: Add a pseudo-element for bullet points */
+.sec-5 li::before {
+    content: "✔"; /* Use a check mark for bullets */
+    color: #0ef; /* Bullet color */
+    position: absolute;
+    left: 0; /* Position to the left */
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+    .sec-5 h1 {
+        font-size: 40px; /* Smaller font size on mobile */
+    }
+
+    .sec-5 .job-title {
+        font-size: 18px; /* Smaller font size for job titles on mobile */
+    }
+
+    .sec-5 .job-location {
+        font-size: 14px; /* Smaller font size for job locations on mobile */
+    }
+
+    .sec-5 p,
+    .sec-5 li {
+        font-size: 16px; /* Smaller font size for mobile */
+    }
+}
+
+
+
+
+.sec-4 {
+    text-align: center; /* Center text and form */
+    padding: 20px; /* Add some padding */
+}
+
+.Feedback {
+    margin-top: 20px; /* Space between heading and form */
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Align items vertically */
+    align-items: center; /* Center items */
+    width: 100%; /* Full width */
+}
+
+#feedbackForm {
+    display: flex; /* Use flexbox for better alignment */
+    flex-direction: column; /* Align fields vertically */
+    align-items: center; /* Center the fields */
+    width: 100%; /* Full width */
+    max-width: 400px; /* Max width for better appearance */
+    margin: 0 auto; /* Center the form */
+}
+
+input[type="email"],
+textarea {
+    width: 100%; /* Full width inputs */
+    padding: 10px; /* Add some padding */
+    margin-bottom: 10px; /* Space between fields */
+    border: 1px solid #ccc; /* Border for input */
+    border-radius: 5px; /* Rounded corners */
+}
+
+input[type="submit"] {
+    background-color: #0ef; /* Button color */
+    color: #fff; /* Text color */
+    padding: 10px 20px; /* Button padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+    input[type="email"],
+    textarea {
+        font-size: 16px; /* Increase font size for smaller screens */
+    }
+
+    input[type="submit"] {
+        font-size: 18px; /* Larger button text */
+    }
+}
+
+
+.images a {
+    display: inline-block; /* This will prevent extra spacing */
+}
+
+.sec-5 .images img {
+    max-width:150px;
+    max-height:150px;
+    margin: 0 10px;
+    transform: translateX(-100%);
+    transition-delay: calc(.2s * var(--i));
+}
+
+.sec-5.show-animate .images img {
+    transform: translateX(0);
+}
 
 
 .return-button {
-
-    top: 20px;
-    left: 20px; /* Changed from 'right' to 'left' */
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    position: absolute; /* Absolute positioning within sec-1 */
+    top: 20px; /* Distance from the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for exact centering */
+    padding: 5px 8px; /* Smaller padding */
+    background-color: #007bff; /* Darker, less distracting background color */
+    color: #fff; /* Text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-size: 12px; /* Smaller font size */
+    cursor: pointer; /* Pointer on hover */
+    z-index: 1000; /* Ensure it appears on top of other elements */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
 .return-button:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+
+
+
+
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Section styling from provided CSS */
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #1f242d;
+    overflow-x: hidden;
+    padding: 20px;
+}
+
+
+
+/* Content Wrapper */
+.content-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #2b303b;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    padding-bottom: 300px; /* Add space at the top */
+}
+
+/* Title */
+.content-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    margin-top: 80px;
+}
+
+/* Image */
+.content-image {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 50%;
+    height: auto;
+    border: 1px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .content-image {
+        max-width: 80%;
+    }
+}
+
+/* Explanation Section */
+.content-explanation {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.content-explanation p, 
+.content-explanation ul {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #f1f1f1;
+}
+
+.content-explanation ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.content-explanation a {
+    color: #007bff;
+}
+
+.content-explanation a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+/* Scroll Down Styling */
+.scroll-down {
+    text-align: center;
+    margin-top: 40px;
+    color: #0ef;
+    animation: bounce 1.5s infinite;
+}
+
+.scroll-down p {
+    font-size: 18px;
+    color: #0ef;
+    margin: 5px 0;
+    animation: bounceText 1.5s infinite;
+}
+
+.scroll-icon {
+    font-size: 30px;
+    animation: bounce 1.5s infinite;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes bounceText {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-5px);
+    }
+    60% {
+        transform: translateY(-3px);
+    }
 }
