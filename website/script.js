@@ -7,7 +7,7 @@ document.getElementById('feedbackForm').addEventListener('submit', async functio
     const email = emailInput.value;
     const message = messageInput.value;
 
-    // Get reCAPTCHA token
+
     grecaptcha.ready(async function() {
         const recaptchaToken = await grecaptcha.execute('6LdtA1IqAAAAAGv9imy5hhgEt5_H5wx23WqE9EHS', {action: 'submit'});
 
@@ -20,25 +20,25 @@ document.getElementById('feedbackForm').addEventListener('submit', async functio
                 body: JSON.stringify({
                     email: email,
                     message: message,
-                    recaptchaToken: recaptchaToken // Send reCAPTCHA token along with form data
+                    recaptchaToken: recaptchaToken
                 })
             });
 
-            // Check if the response is ok
+
             if (!response.ok) {
                 throw new Error('Failed to send feedback');
             }
 
-            // Parse the JSON response
-            const result = await response.json();
-            alert(result.message);  // Should display 'Feedback received successfully!'
 
-            // Clear the form fields after successful submission
+            const result = await response.json();
+            alert(result.message);  
+
+            
             emailInput.value = '';
             messageInput.value = '';
 
         } catch (error) {
-            alert(error.message);  // Display the error message
+            alert(error.message);  
         }
     });
 });
