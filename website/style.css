@@ -15,225 +15,225 @@ section {
     min-height: 100vh;
     background: #1f242d;
     overflow-x: hidden;
-    padding: 20px; /* Added padding for spacing */
+    padding: 20px; 
 }
 
 h1 {
-    font-size: 70px; /* Adjusted font size */
+    font-size: 70px; 
     color: #fff;
-    text-align: center; /* Centered text */
-    animation: fadeInUp 0.6s ease forwards; /* Animation for the title */
+    text-align: center; 
+    animation: fadeInUp 0.6s ease forwards; 
 }
 
 p {
-    font-size: 24px; /* Adjusted font size */
+    font-size: 24px; 
     color: #0ef;
     font-weight: 600;
-    text-align: center; /* Centered text */
-    margin: 5px 0; /* Spacing between paragraphs */
-    animation: fadeInUp 0.6s ease forwards; /* Animation for paragraphs */
+    text-align: center;
+    margin: 5px 0; 
+    animation: fadeInUp 0.6s ease forwards; 
 }
 
 .animate {
     opacity: 0;
-    transform: translateY(20px); /* Start slightly below */
-    transition: opacity 0.6s ease, transform 0.6s ease; /* Smooth transition */
+    transform: translateY(20px); 
+    transition: opacity 0.6s ease, transform 0.6s ease; 
 }
 
 .show-animate .animate {
-    opacity: 1; /* Fade in */
-    transform: translateY(0); /* Reset position */
+    opacity: 1; 
+    transform: translateY(0); 
 }
 
-/* Animation Keyframes */
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(20px); /* Start slightly below */
+        transform: translateY(20px); 
     }
     to {
         opacity: 1;
-        transform: translateY(0); /* Reset position */
+        transform: translateY(0);
     }
 }
 
-/* Media queries for responsiveness */
+
 @media only screen and (max-width: 768px) {
     h1 {
-        font-size: 50px; /* Smaller font size on mobile */
+        font-size: 50px;
     }
     p {
-        font-size: 18px; /* Smaller font size for paragraphs */
+        font-size: 18px; 
     }
 }
 
 
 
 .sec-2 {
-    padding: 20px; /* Added padding for spacing */
-    text-align: center; /* Centered text for better presentation */
+    padding: 20px; 
+    text-align: center; 
 }
 
 .sec-2 .animate {
-    opacity: 0; /* Initial opacity for animation */
-    transform: translateX(100%); /* Initial position for animation */
-    transition: transform 0.5s, opacity 0.5s; /* Smooth transition */
+    opacity: 0; 
+    transform: translateX(100%);
+    transition: transform 0.5s, opacity 0.5s; 
 }
 
 .sec-2.show-animate .animate {
-    opacity: 1; /* Fade in */
-    transform: translateX(0); /* Reset position */
+    opacity: 1; 
+    transform: translateX(0); 
 }
 
 .sec-2 p {
-    color: #0ef; /* Text color */
-    font-size: 20px; /* Adjusted font size */
-    max-width: 800px; /* Max width for readability */
-    margin: 10px auto; /* Centered margin */
+    color: #0ef; 
+    font-size: 20px; 
+    max-width: 800px;
+    margin: 10px auto; 
 }
 
-/* Media queries for responsiveness */
+
 @media only screen and (max-width: 768px) {
     .sec-2 p {
-        font-size: 16px; /* Smaller font size on mobile */
+        font-size: 16px;
     }
     .sec-2 h1 {
-        font-size: 50px; /* Smaller font size for paragraphs on mobile */
+        font-size: 50px; 
     }
 }
 
 
 .sec-3 {
-    padding: 20px; /* Added padding for spacing */
-    text-align: center; /* Centered text for headings */
+    padding: 20px; 
+    text-align: center; 
 }
 
 .sec-3 .animate {
-    opacity: 0; /* Initial opacity for animation */
-    transform: scale(0.9); /* Slightly smaller for animation */
-    transition: 0.5s; /* Smooth transition for appearance */
+    opacity: 0; 
+    transform: scale(0.9); 
+    transition: 0.5s;
 }
 
 .sec-3.show-animate .animate {
-    opacity: 1; /* Fade in */
-    transform: scale(1); /* Reset to normal size */
+    opacity: 1; 
+    transform: scale(1); 
 }
 
 .sec-3 h1 {
-    font-size: 60px; /* Adjusted font size for the heading */
-    color: #fff; /* Color for the heading */
-    margin-bottom: 20px; /* Spacing below the heading */
+    font-size: 60px; 
+    color: #fff; 
+    margin-bottom: 20px;
 }
 
 .sec-3 p {
-    color: #e0f; /* Color for paragraph text */
-    font-size: 20px; /* Font size for paragraphs */
-    max-width: 800px; /* Max width for readability */
-    margin: 10px auto; /* Centered with margin */
+    color: #e0f; 
+    font-size: 20px; 
+    max-width: 800px;
+    margin: 10px auto; 
 }
 
 .sec-3 ul {
-    list-style-type: none; /* Removed bullet points */
-    padding: 0; /* Removed default padding */
-    margin: 20px 0; /* Spacing for the list */
+    list-style-type: none; 
+    padding: 0; 
+    margin: 20px 0; 
 }
 
 .sec-3 li {
-    font-size: 18px; /* Font size for list items */
-    color: #0ef; /* Consistent color with text */
-    margin: 10px 0; /* Spacing between list items */
+    font-size: 18px; 
+    color: #0ef; 
+    margin: 10px 0; 
 }
 
-/* Media queries for responsiveness */
+
 @media only screen and (max-width: 768px) {
     .sec-3 h1 {
-        font-size: 40px; /* Smaller font size on mobile */
+        font-size: 40px; 
     }
 
     .sec-3 p {
-        font-size: 16px; /* Smaller font size for paragraphs on mobile */
+        font-size: 16px; 
     }
 
     .sec-3 li {
-        font-size: 16px; /* Smaller font size for list items on mobile */
+        font-size: 16px; 
     }
 }
 
 
 .sec-5 {
-    padding: 20px; /* Added padding for better spacing */
-    text-align: center; /* Centered title */
+    padding: 20px; 
+    text-align: center; 
 }
 
 .sec-5 h1 {
-    font-size: 60px; /* Adjusted font size for the heading */
-    color: #fff; /* Color for the heading */
-    margin-bottom: 20px; /* Spacing below the heading */
+    font-size: 60px;
+    color: #fff; 
+    margin-bottom: 20px; 
 }
 
 .sec-5 .animate {
-    opacity: 0; /* Initial opacity for animation */
-    transform: scale(0.9); /* Slightly smaller for animation */
-    transition: 0.5s; /* Smooth transition for appearance */
+    opacity: 0; 
+    transform: scale(0.9); 
+    transition: 0.5s; 
 }
 
 .sec-5.show-animate .animate {
-    opacity: 1; /* Fade in */
-    transform: scale(1); /* Reset to normal size */
+    opacity: 1; 
+    transform: scale(1); 
 }
 
 .sec-5 .job-title {
-    color: #e0f; /* Color for job titles */
-    font-size: 20px; /* Adjusted font size for job titles */
-    margin: 5px 0; /* Margin for spacing */
+    color: #e0f;
+    font-size: 20px; 
+    margin: 5px 0; 
 }
 
 .sec-5 .job-location {
-    color: #0ef; /* Color for job locations */
-    font-size: 16px; /* Smaller font size for locations */
-    margin: 5px 0; /* Margin for spacing */
+    color: #0ef; 
+    font-size: 16px; 
+    margin: 5px 0; 
 }
 
 .sec-5 ul {
-    list-style-type: none; /* Remove bullet points */
-    padding: 0; /* Remove padding */
-    margin: 10px 0; /* Margin for spacing */
-    text-align: left; /* Align text to the left */
+    list-style-type: none; 
+    padding: 0; 
+    margin: 10px 0; 
+    text-align: left; 
 }
 
 .sec-5 li {
-    font-size: 18px; /* Adjusted font size for list items */
-    max-width: 800px; /* Max width for readability */
-    color: #0ef; /* Consistent color */
-    margin: 5px 0; /* Margin for spacing between items */
-    padding-left: 20px; /* Indent for better layout */
+    font-size: 18px; 
+    max-width: 800px; 
+    color: #0ef; 
+    margin: 5px 0; 
+    padding-left: 20px; 
 }
 
-/* Optional: Add a pseudo-element for bullet points */
+
 .sec-5 li::before {
-    content: "✔"; /* Use a check mark for bullets */
-    color: #0ef; /* Bullet color */
+    content: "✔"; 
+    color: #0ef; 
     position: absolute;
-    left: 0; /* Position to the left */
+    left: 0; 
 }
 
-/* Media queries for responsiveness */
+
 @media only screen and (max-width: 768px) {
     .sec-5 h1 {
-        font-size: 40px; /* Smaller font size on mobile */
+        font-size: 40px; 
     }
 
     .sec-5 .job-title {
-        font-size: 18px; /* Smaller font size for job titles on mobile */
+        font-size: 18px; 
     }
 
     .sec-5 .job-location {
-        font-size: 14px; /* Smaller font size for job locations on mobile */
+        font-size: 14px; 
     }
 
     .sec-5 p,
     .sec-5 li {
-        font-size: 16px; /* Smaller font size for mobile */
+        font-size: 16px; 
     }
 }
 
@@ -241,60 +241,60 @@ p {
 
 
 .sec-4 {
-    text-align: center; /* Center text and form */
-    padding: 20px; /* Add some padding */
+    text-align: center;
+    padding: 20px; 
 }
 
 .Feedback {
-    margin-top: 20px; /* Space between heading and form */
-    display: flex; /* Use flexbox for centering */
-    flex-direction: column; /* Align items vertically */
-    align-items: center; /* Center items */
-    width: 100%; /* Full width */
+    margin-top: 20px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    width: 100%; 
 }
 
 #feedbackForm {
-    display: flex; /* Use flexbox for better alignment */
-    flex-direction: column; /* Align fields vertically */
-    align-items: center; /* Center the fields */
-    width: 100%; /* Full width */
-    max-width: 400px; /* Max width for better appearance */
-    margin: 0 auto; /* Center the form */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    width: 100%; 
+    max-width: 400px; 
+    margin: 0 auto; 
 }
 
 input[type="email"],
 textarea {
-    width: 100%; /* Full width inputs */
-    padding: 10px; /* Add some padding */
-    margin-bottom: 10px; /* Space between fields */
-    border: 1px solid #ccc; /* Border for input */
-    border-radius: 5px; /* Rounded corners */
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
 }
 
 input[type="submit"] {
-    background-color: #0ef; /* Button color */
-    color: #fff; /* Text color */
-    padding: 10px 20px; /* Button padding */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer on hover */
+    background-color: #0ef; 
+    color: #fff; 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer; 
 }
 
-/* Media queries for responsiveness */
+
 @media only screen and (max-width: 768px) {
     input[type="email"],
     textarea {
-        font-size: 16px; /* Increase font size for smaller screens */
+        font-size: 16px; 
     }
 
     input[type="submit"] {
-        font-size: 18px; /* Larger button text */
+        font-size: 18px; 
     }
 }
 
 
 .images a {
-    display: inline-block; /* This will prevent extra spacing */
+    display: inline-block; 
 }
 
 .sec-5 .images img {
@@ -311,24 +311,24 @@ input[type="submit"] {
 
 
 .return-button {
-    position: absolute; /* Absolute positioning within sec-1 */
-    top: 20px; /* Distance from the top */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust for exact centering */
-    padding: 5px 8px; /* Smaller padding */
-    background-color: #007bff; /* Darker, less distracting background color */
-    color: #fff; /* Text color */
-    border: none; /* No border */
-    border-radius: 4px; /* Rounded corners */
-    text-decoration: none; /* Remove underline */
-    font-size: 12px; /* Smaller font size */
-    cursor: pointer; /* Pointer on hover */
-    z-index: 1000; /* Ensure it appears on top of other elements */
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    position: absolute; 
+    top: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    padding: 5px 8px; 
+    background-color: #007bff; 
+    color: #fff; 
+    border: none; 
+    border-radius: 4px; 
+    text-decoration: none; 
+    font-size: 12px; 
+    cursor: pointer; 
+    z-index: 1000; 
+    transition: background-color 0.3s; 
 }
 
 .return-button:hover {
-    background-color: #0056b3; /* Darker shade on hover */
+    background-color: #0056b3; 
 }
 
 
